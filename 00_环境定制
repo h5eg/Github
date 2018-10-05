@@ -1,0 +1,62 @@
+
+
+1.安装Git（省略）
+
+
+
+2.使用 git config 工具来配置 Git 的运行环境
+
+   配置文件存放在不同的位置
+
+a. /etc/gitconfig文件，包含系统上每一个用户及他们仓库的通用配置
+
+   使用带 --system 参数的 git config 命令时，会读写此文件。
+
+b. ~/.gitconfig文件 或 ~/.config/git/config文件 ，只针对当前用户
+
+   使用带 --global 参数的 git config 命令时，会读写此文件。
+
+c. 当前使用仓库的 git目录 中的config文件(.git/config)，针对当前仓库
+
+
+每一个级别都会覆盖上一个级别，因此 .git/config 的配置会覆盖 /etc/gitconfig
+
+
+
+3.设置用户名和邮箱地址
+
+   每一个Git的提交，都会使用到用户名和邮箱地址，并且会写入到每一次提交中，不可更改
+
+   $ git config --global user.name "hel"
+
+   $ git config --global user.email huangenling1991@example.com
+
+
+使用了 --global 参数，设置用户名和邮箱地址的命令只需执行一次就可以了，之后Git都会使用到该信息。
+
+想在特定项目中使用不同的 用户名和邮箱地址，可以在项目目录下使用没有 --global 参数的命令来配置
+
+
+
+4.配置默认的文本编辑器，当Git需要你输入信息时会调用文本编辑器
+
+   如果为配置，Git会使用系统默认的文本编辑器，比如 Vim
+
+   如果想使用别的编辑器，如 abc文本编辑器
+
+   $ git config --global core.editor abc
+
+
+
+5.检查配置信息
+
+   $ git config --list
+
+   git config <key> ，查看某一项配置信息
+
+   $ git config user.name
+
+
+
+
+
