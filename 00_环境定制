@@ -42,9 +42,9 @@ c. 当前使用仓库的 git目录 中的config文件(.git/config)，针对当�
 
    如果为配置，Git会使用系统默认的文本编辑器，比如 Vim
 
-   如果想使用别的编辑器，如 abc文本编辑器
+   如果想使用别的编辑器，如 vim
 
-   $ git config --global core.editor abc
+   $ git config --global core.editor vim
 
 
 
